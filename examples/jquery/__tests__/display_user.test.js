@@ -8,6 +8,8 @@ jest.mock('../fetchCurrentUser.js');
 
 it('displays a user after a click', () => {
   // Set up our document body
+  // HTMLを模倣する。
+  // ローカルのhtmlファイルにajaxかけて回収できるかもしれない。
   document.body.innerHTML =
     '<div>' +
     '  <span id="username" />' +
