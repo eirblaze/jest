@@ -14,6 +14,7 @@ it('calls into $.ajax with the correct params', () => {
 
   // Now make sure that $.ajax was properly called during the previous
   // 2 lines
+  // jest expect @see https://jestjs.io/docs/ja/expect
   expect($.ajax).toBeCalledWith({
     success: expect.any(Function),
     type: 'GET',
