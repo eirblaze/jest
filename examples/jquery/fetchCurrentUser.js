@@ -9,6 +9,11 @@ function parseJSON(user) {
   };
 }
 
+/**
+ * 特定のURLにアクセスし、ユーザーの状態を取得する。
+ * この例では、URLリクエストの中身をハードコーディングしてある。
+ * @param {Function} callback ajax成功後に実行する関数。
+ */
 function fetchCurrentUser(callback) {
   return $.ajax({
     success: user => callback(parseJSON(user)),

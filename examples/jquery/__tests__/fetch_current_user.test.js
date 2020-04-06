@@ -15,6 +15,8 @@ it('calls into $.ajax with the correct params', () => {
   // Now make sure that $.ajax was properly called during the previous
   // 2 lines
   // jest expect @see https://jestjs.io/docs/ja/expect
+  // toBeCalledWithはtoHaveBeenCalledWithの別名 @see https://qiita.com/chimame/items/e97883fd46b67529d59f
+  // モック関数が特定の引数を与えられて呼び出されたことを確認するには .toHaveBeenCalledWith を使用して下さい。
   expect($.ajax).toBeCalledWith({
     success: expect.any(Function),
     type: 'GET',
